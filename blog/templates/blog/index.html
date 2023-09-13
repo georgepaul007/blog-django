@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Blog
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <header>
+        <h2>George's blog</h2>
+    </header>
+    <p>Hi, I am George, and this is my blog project! </p>
+</section>
+
+<section id="all-posts">
+  <h2>My Collected Posts</h2>
+
+  <ul>
+    {% for post in posts %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+<section>
+    <h2>About Me</h2>
+    <p>I am a tech enthusiast with great knowledge and experience building applications from the ground up</p>
+    <p>I would like to keep growing and keep having challenges and over coming them</p>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Post Title 
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+  <h2>{{ post.title }}</h2>
+  <article>
+    <address>By {{ post.author }}</address>
+    <div>Last updated on <time>{{ post.date|date:"d M Y" }}</time></div>
+  </article>
+</section>
+
+<main>
+  {{ post.content|linebreaks }}
+</main>
+{% endblock %}
